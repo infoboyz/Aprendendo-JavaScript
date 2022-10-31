@@ -1,13 +1,13 @@
 //Trazendo do html todas as teclas de som
-const pom = document.querySelector('.tecla_pom');
-const clap = document.querySelector('.tecla_clap');
-const tim = document.querySelector('.tecla_tim');
-const puff = document.querySelector('.tecla_puff');
-const spash = document.querySelector('.tecla_splash');
-const toim = document.querySelector('.tecla_toim');
-const psh = document.querySelector('.tecla_psh');
-const tic = document.querySelector('.tecla_tic');
-const tom = document.querySelector('.tecla_tom');
+document.querySelector('.tecla_pom').onclick = tocaSomPom;
+document.querySelector('.tecla_clap').onclick = tocaSomClap;
+document.querySelector('.tecla_tim').onclick = tocaSomTim;
+document.querySelector('.tecla_puff').onclick = tocaSomPuff;
+document.querySelector('.tecla_splash').onclick = tocaSomSplash;
+document.querySelector('.tecla_toim').onclick = tocaSomToim;
+document.querySelector('.tecla_psh').onclick = tocaSomPsh;
+document.querySelector('.tecla_tic').onclick = tocaSomTic;
+document.querySelector('.tecla_tom').onclick = tocaSomTom;
 
 //Criando as funções que armazenam todos os sons das teclas
 function tocaSomPom() {
