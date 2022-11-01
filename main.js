@@ -1,6 +1,5 @@
 //Declaracao de referencias
 const listadeTeclas = document.querySelectorAll('.tecla');
-let x = 0;
 
 //Funcoes
 function tocaSom (idElementoAudio) {
@@ -8,7 +7,7 @@ function tocaSom (idElementoAudio) {
 }
 
 //Estrutura de repeticao para por o som nas teclas
-while (x < listadeTeclas.length) {
+for (let x = 0; x < listadeTeclas.length ; x++) {
 
     //Declaracao de referencias dentro do while
     const tecla = listadeTeclas[x]
@@ -20,7 +19,4 @@ while (x < listadeTeclas.length) {
         tocaSom(idAudio)
     
     }
-
-    //Continuando a estrutura de repeticao
-    x = x + 1;
 }
