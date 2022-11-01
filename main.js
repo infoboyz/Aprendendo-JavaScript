@@ -9,7 +9,9 @@ function tocaSom (idElementoAudio) {
 
 //Estrutura de repeticao para por o som nas teclas
 while (x < listadeTeclas.length) {
-    listadeTeclas[x].onclick = tocaSom;
+    listadeTeclas[x].onclick = function () {
+        tocaSom('#som_tecla_pom')
+    }
     x = x + 1;
     console.log(x);
 }
