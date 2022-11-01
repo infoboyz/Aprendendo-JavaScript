@@ -9,9 +9,18 @@ function tocaSom (idElementoAudio) {
 
 //Estrutura de repeticao para por o som nas teclas
 while (x < listadeTeclas.length) {
-    listadeTeclas[x].onclick = function () {
-        tocaSom('#som_tecla_pom')
+
+    //Declaracao de referencias dentro do while
+    const tecla = listadeTeclas[x]
+    const classe = tecla.classList[1];
+    const idAudio = `#som_${classe}`
+
+    //Inserindo o som na tecla
+    tecla.onclick = function () {
+        tocaSom(idAudio)
+    
     }
+
+    //Continuando a estrutura de repeticao
     x = x + 1;
-    console.log(x);
 }
