@@ -14,4 +14,13 @@ for (x = 0; x < listadeTeclas.length; x++){
     tecla.onclick = function () {
         campo.value += tecla.value;
     }
+    
+    tecla.onkeydown = function (evento) {
+        if(evento.code === "Enter" || evento.code === "Space") {
+            tecla.classList.add('ativa');
+        }
+    }
+    tecla.onkeyup = function () {
+        tecla.classList.remove('ativa');
+    }
 }
