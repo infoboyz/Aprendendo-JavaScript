@@ -2,8 +2,15 @@
 const listadeTeclas = document.querySelectorAll('.tecla');
 
 //Funcoes
-function tocaSom (idElementoAudio) {
-    document.querySelector(idElementoAudio).play();
+function tocaSom (seletorAudio) {
+    const elemento = document.querySelector(seletorAudio);
+    if (elemento === null) {
+        console.log('Elemento não encontrado');
+    }else {
+        if (elemento.localName === 'audio'){
+        elemento.play();
+        }
+    }
 }
 
 //Estrutura de repeticao para por o som nas teclas
