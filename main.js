@@ -12,11 +12,15 @@ for (let x = 0; x < listadeTeclas.length ; x++) {
     //Declaracao de referencias dentro do while
     const tecla = listadeTeclas[x]
     const classe = tecla.classList[1];
-    const idAudio = `#som_${classe}`
+    //Template string
+    const idAudio = `#som_${classe}`; 
 
     //Inserindo o som na tecla
     tecla.onclick = function () {
-        tocaSom(idAudio)
-    
+        tocaSom(idAudio);
+    }
+
+    tecla.onkeydown = function () {
+        tecla.classList.add('ativa');
     }
 }
